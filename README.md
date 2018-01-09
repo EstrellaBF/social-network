@@ -1,6 +1,2 @@
-# social-network
-we¿re testing pull request
-holaaaaaa
-prueba 1
-ramificando
+# CREA TU PROPIA RED SOCIAL
 
