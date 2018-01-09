@@ -1,0 +1,1 @@
+// agregar evento al menu icon

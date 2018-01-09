@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
 }
 
 img{
@@ -11,7 +12,41 @@ img{
 
 /*estilos a menu*/
 
+.home{
+  background-image: url(../assets/images/PF-03.png);
+  height: 100vh;
+  color: white;
+}
 
+.home .container:first-child{
+  padding-top: 3.5em;
+}
+
+.menu-icons{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.2em;
+}
+
+.menu-icons h2{
+  font-size: 2em;
+  margin: 0.2em;
+}
+
+.menu-icons i{
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+.icon-cont{
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 4.8em;
+  height: 4.8em;
+  text-align: center;
+}
 
 /*estilos a profile*/
 
