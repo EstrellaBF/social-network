@@ -1,7 +1,7 @@
 $('document').ready(function() {
   // Se crea variables para cada div y se filtrará por find ya que en clase explicaron que de esta forma evitaremos cargar de muchas cosas la página y se hace ligera
   // Ecxcepto los que tendrán eventos
-  var $signup = $('#signup');
+  var $signupGoogle = $('#signup-google');
   var $photoChrome = $('#photo-chrome');
   var $password = $('#password');
   var $passwordInput = $('#password input');
@@ -30,12 +30,12 @@ $('document').ready(function() {
   var provider = new firebase.auth.GoogleAuthProvider();
 
   // signInWithPopup
-  $signup.on('click', function() {
+  $signupGoogle.on('click', function() {
     // Pegando la primera línea del punto 5    
     firebase.auth().signInWithPopup(provider).then(function(result) {
       console.log(result.user);
-      saveAccount(result.user);
-      $signup.hide();
+      // saveAccount(result.user);
+      $signupGoogle.hide();
       // añadiendo mi imagen de google
       $photoChrome.append('<img width="100px" src=" ' + result.user.photoURL + ' " />', '<p> '+result.user.displayName+ '<p/>');
       $password.show();
@@ -61,6 +61,10 @@ $('document').ready(function() {
       $signupBoxButton.prop('disabled', true);
     };
   }
+
+  // Evento para que guarde toda la info al dar click en registrarse
+  $signupBoxButton.on('click', );
+
   // Guardando datos 
   function saveAccount(user) {
     userInfo.uid = user.uid;
@@ -74,7 +78,6 @@ $('document').ready(function() {
     firebase.database().ref('newDB/' + user.uid).set(userInfo); 
   }
       console.log(userInfo);
-
 
   // Guardando todos los datos al hacer click
   // $signupBoxButton.on('click', function() {
