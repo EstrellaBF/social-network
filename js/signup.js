@@ -6,14 +6,14 @@ $('document').ready(function() {
   var $password = $('#password');
   var $passwordInput = $('#password input');
   var $signupBox = $('#signup-box');
-  var $signupBoxButton = $('#signup-box button');
+  var $signupBoxSend = $('#signup-box button'); // botón de enviar 
 
   // Ocultando input de password y la etiuqeta p de bienvenida
   $password.hide();
   $signupBox.find('p').hide();
 
   // desactivando boton de registro
-  $signupBoxButton.prop('disabled', true);
+  $signupBoxSend.prop('disabled', true);
 
   // FIREBASE
   // Initialize Firebase
@@ -29,23 +29,36 @@ $('document').ready(function() {
   // LOGIN
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  // signInWithPopup
-  $signupGoogle.on('click', function() {
+  // Al dar click en registrate con google se lanza el modal
+  $signupGoogle.on('click', gmailInfo);
+
+  // Función del modal de google
+  function gmailInfo() {
     // Pegando la primera línea del punto 5    
     firebase.auth().signInWithPopup(provider).then(function(result) {
       console.log(result.user);
-      // saveAccount(result.user);
+      saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
       $photoChrome.append('<img width="100px" src=" ' + result.user.photoURL + ' " />', '<p> '+result.user.displayName+ '<p/>');
       $password.show();
     });   
-  });
-
+  }
+  
   // objeto de la base de datos
-  // creando var para almacenar del usuario su nombre mail y foto
   var userInfo = {};
-
+  // Guardando datos 
+  function saveAccount(user) {
+    userInfo.uid = user.uid;
+    userInfo.nombre = user.displayName;
+    userInfo.correo = user.email;
+    userInfo.foto = user.photoURL;
+    console.log(localStorage.password);
+    // userInfo.nombrecito = getPassword;
+    // guardando en firebase, recuerda que set grabaría en toda la rama, osea se sustituiria. Se concatena para que se almacene en la misma user id
+    firebase.database().ref('newDB/' + user.uid).set(userInfo); 
+  }
+  
   // Evento que limita la contraseña entre 4 y 10 dígitos
   $passwordInput.on('input', passwordLength);
 
@@ -54,36 +67,26 @@ $('document').ready(function() {
     // console.log($(this).val());
     // console.log($(this).val().length);
     if ($(this).val().length >= 4 && $(this).val().length <= 10) {
-      $signupBoxButton.prop('disabled', false);
+      $signupBoxSend.prop('disabled', false);
       localStorage.password = $(this).val();
-      // localStorage.phoneNumber = $(this).val();
+      userInfo.pass = localStorage.password;
     } else {
-      $signupBoxButton.prop('disabled', true);
+      $signupBoxSend.prop('disabled', true);
     };
   }
 
   // Evento para que guarde toda la info al dar click en registrarse
-  $signupBoxButton.on('click', );
+  // ME QUEDÉ AQUÍ INTENTANDO JALAR LA INFO COMO DATOS Y DEMAS DE FIREBASE
+  $signupBoxSend.on('click', function(){
+    var userId = firebase.auth().currentUser.uid;
+    firebase.database().ref('newDB' + userId).on('child_added', function(s) {
+      var user = s.val();   
+      console.log(user)
+      
+    })
 
-  // Guardando datos 
-  function saveAccount(user) {
-    userInfo.uid = user.uid;
-    userInfo.nombre = user.displayName;
-    userInfo.correo = user.email;
-    userInfo.foto = user.photoURL;
-    userInfo.pass = localStorage.password;
-  console.log(localStorage.password);
-    // userInfo.nombrecito = getPassword;
-    // guardando en firebase, recuerda que set grabaría en toda la rama, osea se sustituiria. Se concatena para que se almacene en la misma user id
-    firebase.database().ref('newDB/' + user.uid).set(userInfo); 
-  }
-      console.log(userInfo);
-
-  // Guardando todos los datos al hacer click
-  // $signupBoxButton.on('click', function() {
-  // });
-
-  
+  });
+  console.log(userInfo); // Objeto con el correo, foto, nombre 
   // END FIREBASE
 
 
