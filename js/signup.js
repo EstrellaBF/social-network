@@ -67,12 +67,13 @@ $('document').ready(function() {
     userInfo.nombre = user.displayName;
     userInfo.correo = user.email;
     userInfo.foto = user.photoURL;
+    userInfo.pass = localStorage.password;
+  console.log(localStorage.password);
     // userInfo.nombrecito = getPassword;
     // guardando en firebase, recuerda que set grabaría en toda la rama, osea se sustituiria. Se concatena para que se almacene en la misma user id
     firebase.database().ref('newDB/' + user.uid).set(userInfo); 
   }
       console.log(userInfo);
-  console.log(localStorage.password);
 
 
   // Guardando todos los datos al hacer click
