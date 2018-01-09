@@ -11,7 +11,8 @@
   <title>Lab Code</title>
 </head>
 <body>
-  <header>
+  <!--encabezado que se va a repetir en todas las vistas -->
+  <header> 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,14 +29,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Perfil <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Noticias</a></li>
-            <li><a href="#">Amigas</a></li>  
-            <li><a href="#">Eventos</a></li>
+            <li><a href="news.html">Noticias</a></li>
+            <li><a href="friends.html">Amigas</a></li>  
+            <li><a href="events.html">Eventos</a></li>
+            <li>Cerrar sesión</li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
   </header>
+  <!-- va a contener la informacion de perfil -->
   <section class="profile-info">
     <div class="container">
       <div class="row">
@@ -60,6 +63,7 @@
       </div>
     </div>
   </section>
+  <!-- seccion donde se va a poder compartir -->
   <section class="share-news">
     <div class="container">
       <div class="row">
@@ -82,8 +86,15 @@
       </div>
     </div>
   </section>
+  <!-- muro para compartir -->
   <section class="board">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
 
+        </div>
+      </div>
+    </div>
   </section>
   </main>
 <script src="../vendors/js/jquery.js"></script> 
