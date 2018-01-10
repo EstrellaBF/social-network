@@ -58,7 +58,7 @@ img{
 }
 
 #photo-chrome p{
-  font-size: 1.1em;
+  font-size: 1.5em;
   padding: 10px 0;
   margin: 5px;
   color: #ff7b2a;
@@ -66,6 +66,19 @@ img{
 
 .form-control{
   border: 1px solid #ff7b2a;
+}
+
+#signup-google{
+  position: relative;
+  top: 15vh;
+  padding: 1em 0;
+}
+
+#signup{
+  position: relative;
+  top: 20vh;
+  padding: 0.5em 0;
+  margin: 20px 0;
 }
 
 /*estilos a menu*/
@@ -162,3 +175,17 @@ h5{
 
 
 /*estilos a friends*/
+.friends-box img {
+  width: 50vw;
+}
+
+.friends-box {
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+}
+
+.search-friend {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
