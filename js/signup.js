@@ -30,7 +30,7 @@ $('document').ready(function() {
       saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
-      $photoChrome.append('<img width="100px" src=" ' + result.user.photoURL + ' " />', '<p> '+result.user.displayName+ '<p/>');
+      $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> '+ result.user.displayName + '<p/>');
       $password.show();
     });   
   }
