@@ -2,12 +2,12 @@ $(document).ready(function() {
 
   // Initialize Firebase
   var config = {
-    apiKey: 'AIzaSyCAUbpYmk_OKh_Cq6SVbIeyQN3YX6OL9KA',
-    authDomain: 'lab-code-22f26.firebaseapp.com',
-    databaseURL: 'https://lab-code-22f26.firebaseio.com',
-    projectId: 'lab-code-22f26',
-    storageBucket: '',
-    messagingSenderId: '586036156732'
+    apiKey: 'AIzaSyDjfb8eBnSQuL_ZLz1lldnhrfRmhh3P1AE',
+    authDomain: 'primer-proyecto-c38c2.firebaseapp.com',
+    databaseURL: 'https://primer-proyecto-c38c2.firebaseio.com',
+    projectId: 'primer-proyecto-c38c2',
+    storageBucket: 'primer-proyecto-c38c2.appspot.com',
+    messagingSenderId: '352532098931'
   };
   firebase.initializeApp(config);
 
@@ -16,10 +16,12 @@ $(document).ready(function() {
     var $post = $('#input-post').val();
     // agregando los post
     $('#new-post').prepend('<div class="col-xs-10 col-xs-offset-1"><p>' + $post + '</p></div>');
+    
     // var $input = $('#input-file');
     // console.log($input);
-    // console.log($('#capture').val());
-
+    console.log($('#capture').val());
+    // si toma una imagen subirla al comparir
+    
     $('#input-post').val('');
   });
 });
