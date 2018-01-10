@@ -49,7 +49,7 @@
             </div>
             <button type="submit" class="btn btn-default">Invitar a una amiga</button>
             <!-- form to send a invitation -->
-            <div id="invitation-form">
+            <!-- <div id="invitation-form">
               <form class="form-inline">
                 <div class="form-group">
                   <label for="exampleInputName2">Escríbele un mensaje</label>
@@ -61,25 +61,26 @@
                 </div>
                 <button type="submit" class="btn btn-default">Send invitation</button>
               </form>
-            </div>  
+            </div>   -->
             <!-- End form -->
           </form>  
         </div>
       </div>
     </div>
   </section>
-  <!-- muro donde va a ir las noticias de los amigos -->
+  <!-- muro donde va a ir todas las chicas que participan en la red social -->
   <section class="news">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                
-            </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="friends"></div>
         </div>
+      </div>
     </div>
   </section>
 <script src="../vendors/js/jquery.js"></script> 
 <script src="../vendors/bootstrap/js/bootstrap.min.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script src="../js/friends.js"></script>   
 </body>
 </html>
