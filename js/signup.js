@@ -6,7 +6,8 @@ $('document').ready(function() {
   var $password = $('#password');
   var $passwordInput = $('#password input');
   var $signupBox = $('#signup-box');
-  var $signupBoxSend = $('#signup-box button'); // botón de enviar 
+  var $signupBoxSend = $('#signup-box button'); // botón de enviar
+  var $userDB; 
 
   // Ocultando input de password y la etiuqeta p de bienvenida
   $password.hide();
@@ -26,23 +27,25 @@ $('document').ready(function() {
   function gmailInfo() {
     // Pegando la primera línea del punto 5    
     firebase.auth().signInWithPopup(provider).then(function(result) {
-      console.log(result.user);
+      $userDB = result.user;
+      console.log($userDB);
       saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
       $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> '+ result.user.displayName + '<p/>');
       $password.show();
+      // añadiendo a localstorage
     });   
   }
-  
+  console.log($userDB);
   // objeto de la base de datos
   var userInfo = {};
   // Guardando datos 
   function saveAccount(user) {
     userInfo.uid = user.uid;
-    userInfo.nombre = user.displayName;
-    userInfo.correo = user.email;
-    userInfo.foto = user.photoURL;
+    userInfo.name = user.displayName;
+    userInfo.mail = user.email;
+    userInfo.photo = user.photoURL;
     console.log(localStorage.password);
     // userInfo.nombrecito = getPassword;
     // guardando en firebase, recuerda que set grabaría en toda la rama, osea se sustituiria. Se concatena para que se almacene en la misma user id
@@ -65,22 +68,14 @@ $('document').ready(function() {
     };
   }
 
+  // almacenando temporalmente en la localstorage para luego subir
+
   // Evento para cambiar al perfil
   $signupBoxSend.on('click', function() {
     window.location.href = 'menu.html';
   });
-  // Evento para que guarde toda la info al dar click en registrarse
-  // ME QUEDÉ AQUÍ INTENTANDO JALAR LA INFO COMO DATOS Y DEMAS DE FIREBASE
-  // $signupBoxSend.on('click', function(){
-  //   var userId = firebase.auth().currentUser.uid;
-  //   firebase.database().ref('newDB' + userId).on('child_added', function(s) {
-  //     var user = s.val();   
-  //     console.log(user)      
-  //   })
-  // });
   console.log(userInfo); // Objeto con el correo, foto, nombre 
-  // END FIREBASE
-
+  
 
 
 });
