@@ -1,9 +1,20 @@
 $(document).ready(function() {
+  var $imageProfile = $('#image-profile');
 
+  // var provider = new firebase.auth.GoogleAuthProvider();
+  // var database = firebase.database();
+  // console.log(database);
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+  // console.log(firebase.auth().R); // ruta uid de quien se enlaza. Se verificó en 3 computadoras distintas
+  // var ruta =firebase.auth().R;
+  // firebase.database().ref('newDB/' + ruta).on('value', function(s) {
+  //   var user = s.val();   
+  //   console.log(user);
+  //   $imageProfile.attr('src', user.foto);
+  // })
+  gmailInfo();
+  console.log($userInfo);
 
-  console.log(provider);
   
   $('#share-btn').click(function() {
     event.preventDefault();
