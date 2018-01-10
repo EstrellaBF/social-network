@@ -74,11 +74,10 @@ img{
   padding: 1em 0;
 }
 
-#signup{
+.registrate{
   position: relative;
   top: 20vh;
   padding: 0.5em 0;
-  margin: 20px 0;
 }
 
 /*estilos a menu*/
@@ -188,4 +187,12 @@ h5{
 .search-friend {
   margin-bottom: 1.5em;
   text-align: center;
+}
+
+@media(min-width: 768px){
+  .register-button{
+    position: relative;
+    top: 80vh;
+    display: inline-block;
+  }
 }
