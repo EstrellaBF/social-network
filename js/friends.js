@@ -1,13 +1,14 @@
 $(document).ready(function() {
   var $friends = $('#friends');
   var $invitationForm = $('#invitation-form');
+  var $sendInvitation = $('#send-invitation');
   var $searchFriends = $('#search-friends');
   var $mailCoder = $('#mail-coder');
   var $messageCoder = $('#message-coder');
   
   // Ocultando formulario de invitación
   $invitationForm.hide();
-  $invitationForm.find('button').prop('disabled', true);
+  $sendInvitation.prop('disabled', true);
 
   // FIREBASE
   // Initialize Firebase
@@ -44,25 +45,27 @@ $(document).ready(function() {
   //   var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
   //   // console.log(patternEmail.test($(this).val()));
   //   if (patternEmail.test($(this).val())) {
-  //     // $invitationForm.find('button').prop('disabled', false);
+  //     // $sendInvitation.prop('disabled', false);
   //   } else {
-  //     // $invitationForm.find('button').prop('disabled', true);
+  //     // $sendInvitation.prop('disabled', true);
   //   }
   // };
-  var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-  if($messageCoder.val().length >= 2 && patternEmail.test($mailCoder.val())) {
-    debugger
-    $invitationForm.find('button').prop('disabled', false);
-  } else {
-    $invitationForm.find('button').prop('disabled', true);
-  };
 
-  // $messageCoder.on('click', function(){
+  // Si se escribe el correo y si este se verifica que es correo y si sse llegó a escribir en el mensaje, el boton para enviar se activa.
+  $mailCoder.on('input', function() {
+    // debugger
+    var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+    if ($messageCoder.val().length >= 2 && patternEmail.test($mailCoder.val())) {
+      $sendInvitation.prop('disabled', false);
+    } else {
+      $sendInvitation.prop('disabled', true);
+    };
+  });
 
-  // });
-  // Funcion de mensaje
-  // function isMessageValid() {
-  //   return $messageCoder.val().length >= 2;
-  // };
+  // Si se hace click en el botón de enviar, se ocultará el formulario. 
+  $sendInvitation.on('click', function() {
+    $invitationForm.hide();
+    $searchFriends.show();
+  });
 
 });
