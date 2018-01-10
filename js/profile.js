@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
 
+  var provider = new firebase.auth.GoogleAuthProvider();
+
+  console.log(provider);
+  
   $('#share-btn').click(function() {
     event.preventDefault();
     var $post = $('#input-post').val();
