@@ -1,27 +1,16 @@
 $(document).ready(function() {
-  // FIREBASE
-  // Set the configuration for your app
-  // TODO: Replace with your project's config object
+
+  // Initialize Firebase
   var config = {
-    apiKey: "apiKey",
-    authDomain: "projectId.firebaseapp.com",
-    databaseURL: "https://databaseName.firebaseio.com",
-    storageBucket: "bucket.appspot.com"
+    apiKey: 'AIzaSyCAUbpYmk_OKh_Cq6SVbIeyQN3YX6OL9KA',
+    authDomain: 'lab-code-22f26.firebaseapp.com',
+    databaseURL: 'https://lab-code-22f26.firebaseio.com',
+    projectId: 'lab-code-22f26',
+    storageBucket: '',
+    messagingSenderId: '586036156732'
   };
   firebase.initializeApp(config);
 
-  // Get a reference to the database service
-  var database = firebase.database();
-  
-
-  firebase.database().ref('nuevaBD').on('child_added', function(s) {
-    var user = s.val();
-    console.log(user.name);
-  });
-  // END FIREBASE
-
-
-  // Función para postear
   $('#share-btn').click(function() {
     event.preventDefault();
     var $post = $('#input-post').val();
