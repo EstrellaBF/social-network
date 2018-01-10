@@ -75,17 +75,19 @@ $('document').ready(function() {
     };
   }
 
+  // Evento para cambiar al perfil
+  $signupBoxSend.on('click', function() {
+    window.location.href = 'profile.html';
+  });
   // Evento para que guarde toda la info al dar click en registrarse
   // ME QUEDÉ AQUÍ INTENTANDO JALAR LA INFO COMO DATOS Y DEMAS DE FIREBASE
-  $signupBoxSend.on('click', function(){
-    var userId = firebase.auth().currentUser.uid;
-    firebase.database().ref('newDB' + userId).on('child_added', function(s) {
-      var user = s.val();   
-      console.log(user)
-      
-    })
-
-  });
+  // $signupBoxSend.on('click', function(){
+  //   var userId = firebase.auth().currentUser.uid;
+  //   firebase.database().ref('newDB' + userId).on('child_added', function(s) {
+  //     var user = s.val();   
+  //     console.log(user)      
+  //   })
+  // });
   console.log(userInfo); // Objeto con el correo, foto, nombre 
   // END FIREBASE
 
