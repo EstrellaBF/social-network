@@ -37,38 +37,32 @@ $(document).ready(function() {
   });
   
   // Evento para guardar el email y verificar que sea email
-  // $mailCoder.on('input', function () {
+  // $mailCoder.on('input', isAnEmail);
+
+  // // función para el evento de verificar mail
+  // function isAnEmail() {
   //   var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
   //   // console.log(patternEmail.test($(this).val()));
   //   if (patternEmail.test($(this).val())) {
-  //     $invitationForm.find('button').prop('disabled', false);
+  //     // $invitationForm.find('button').prop('disabled', false);
   //   } else {
-  //     $invitationForm.find('button').prop('disabled', true);
+  //     // $invitationForm.find('button').prop('disabled', true);
   //   }
-  //   // 
+  // };
+  var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+  if($messageCoder.val().length >= 2 && patternEmail.test($mailCoder.val())) {
+    debugger
+    $invitationForm.find('button').prop('disabled', false);
+  } else {
+    $invitationForm.find('button').prop('disabled', true);
+  };
+
+  // $messageCoder.on('click', function(){
+
   // });
-
   // Funcion de mensaje
-  function isMessageValid() {
-    return $messageCoder.val().length >= 2;
-  };
-
-  // función de correo
-  function isMailValid() {
-    var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-    // console.log(patternEmail.test($(this).val()));
-    return patternEmail.test($(this).val())
-  };
-
-  // Evento pasa mensaje
-
-  function passwordEvent() {
-    if (isMessageValid()) {
-      console.log(true);
-    } else {
-      console.log(false);
-    }
-  };
-  passwordEvent()
+  // function isMessageValid() {
+  //   return $messageCoder.val().length >= 2;
+  // };
 
 });
