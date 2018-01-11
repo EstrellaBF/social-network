@@ -9,6 +9,38 @@
   <title>Lab Code</title>
 </head>
 <body>
+  <!-- propuesta de header inicial-->
+  <header>
+      <nav class="navbar navbar-default back-navbar" role="navigation">
+        <!-- despliegue en dispositivos móviles -->
+        <div class= "navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+          data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- logo de navbar-->
+          <a class="navbar-brand" href="#">
+            <img class="logo-size" src="../assets/images/img-prop/logo-lab.png" alt="">
+            <h1 class= "title-list-service" > Lab<Code> </h1>
+          </a>
+        
+        <!-- enlaces de navegación visibles en desktop y agrupados no visibles en vista móvil -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!--  fin de propuesta-->
   <main class="home">
     <div class="container">
       <div class="row">
@@ -24,6 +56,8 @@
       </div>
     </div>
   </main>
+
+  
 <script src="../vendors/js/jquery.js"></script> 
 <script src="../vendors/bootstrap/js/bootstrap.min.js"></script> 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
