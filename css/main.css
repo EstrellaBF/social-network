@@ -29,7 +29,7 @@ img{
   bottom: 2em;
   display: flex;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .register-button button{
@@ -191,8 +191,11 @@ h5{
 
 @media(min-width: 768px){
   .register-button{
-    position: relative;
+    /*position: relative;
     top: 80vh;
-    display: inline-block;
+    display: inline-block;*/
+    /* se utiliza la propiedas de flex para ponerlo en fila*/
+    flex-direction: row;
+    justify-content: center;
   }
 }
