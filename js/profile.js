@@ -5,10 +5,10 @@ $(document).ready(function() {
   // imagen para capturar desde la computadora
   var $image = $('#input-file');
 
-  // instanciando el objeto
+  // intentando entrar a la base de datos
   var $newDB = firebase.database();
   var dataReference = $dataBase.ref('newDB');
-  console.log(dataReference);
+  console.log($newDB);
 
   $('#share-btn').click(function() {
     event.preventDefault();
