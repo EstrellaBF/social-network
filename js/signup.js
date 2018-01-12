@@ -32,7 +32,7 @@ $('document').ready(function() {
       saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
-      $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> '+ result.user.displayName + '<p/>');
+      $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> ' + result.user.displayName + '<p/>');
       $password.show();
       // añadiendo a localstorage
     });   
@@ -75,7 +75,4 @@ $('document').ready(function() {
     window.location.href = 'menu.html';
   });
   console.log(userInfo); // Objeto con el correo, foto, nombre 
-  
-
-
 });
