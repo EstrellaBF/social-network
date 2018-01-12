@@ -191,8 +191,14 @@ h5{
 
 @media(min-width: 768px){
   .register-button{
-    position: relative;
+    position: static;
     top: 80vh;
     display: inline-block;
+  }
+
+  .register-button button{
+    font-size: 1.3em;
+    padding: 10px 0;
+    margin: 0;
   }
 }

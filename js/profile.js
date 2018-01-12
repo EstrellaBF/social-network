@@ -1,5 +1,16 @@
 $(document).ready(function() {
-  var $imageProfile = $('#image-profile');
+
+  console.log(firebase.auth().R);
+
+  var uidhere = firebase.auth().R
+  console.log(uidhere['foto']);
+  
+
+  // var userf = firebase.database().ref('newDB/' + user.uid);
+  // console.log(userf)
+
+  // $('#picture-profile').attr('src','')
+
   
   $('#share-btn').click(function() {
     event.preventDefault();
