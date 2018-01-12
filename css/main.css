@@ -18,6 +18,68 @@ img{
   transform: translateY(-50%)
 }
 
+/*estilos a register*/
+.logo-register{
+  position: absolute;
+  top: 35vh;
+}
+
+.register-button{
+  position: absolute;
+  bottom: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.register-button button{
+  font-size: 1.3em;
+  padding: 10px 0;
+  margin: 5px;
+}
+
+/*estilos a signup*/
+
+.logo-header{
+  margin: 1.5em 0;
+}
+
+.reg-google{
+  text-align: center;
+  padding: 0 1em;
+}
+
+.reg-google p{
+  font-size: 1.5em;
+}
+
+#photo-chrome{
+  text-align: center;
+}
+
+#photo-chrome p{
+  font-size: 1.5em;
+  padding: 10px 0;
+  margin: 5px;
+  color: #ff7b2a;
+}
+
+.form-control{
+  border: 1px solid #ff7b2a;
+}
+
+#signup-google{
+  position: relative;
+  top: 15vh;
+  padding: 1em 0;
+}
+
+.registrate{
+  position: relative;
+  top: 20vh;
+  padding: 0.5em 0;
+}
+
 /*estilos a menu*/
 
 /* los menús que no se visaulizarán se opacan por el momento */
@@ -107,6 +169,7 @@ h5{
   background: linear-gradient(135deg, rgba(255,179,0,1) 0%, rgba(255,124,42,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb300', endColorstr='#ff7c2a', GradientType=1 );
   border: none;
+  color: white;
 }
 
 .prueba{
@@ -122,6 +185,5 @@ h5{
 
 
 /*estilos a friends*/
-#friends p {
-  margin-bottom: 5em;
+
 }

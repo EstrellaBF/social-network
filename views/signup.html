@@ -5,20 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="../css/main.css">
   <title>Lab Code</title>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Logo</h2>
-        <div>
-          <p>Regístrate en sólo un paso con Google!</p>
-          <button class="btn btn-default" type="submit" id="signup-google">Regístrate</button>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-7 logo-header">
+          <img src="../assets/images/PF-02.png" alt="logo">
         </div>
       </div>
     </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 reg-google">
+          <p>Regístrate en sólo un paso con Google!</p>
+        </div>
+        <button class="btn btn-default col-xs-8 col-xs-offset-2" type="submit" id="signup-google">Inicia con google</button>
+      </div>
+    </div>
+  </section>
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <div id="photo-chrome"></div>
@@ -32,7 +42,7 @@
       <div class="col-xs-12">
         <div id="signup-box">
           <p>¡Bienvenida a la red Social!</p>
-          <button class="btn btn-default" type="submit" id="signup">Regístrate</button>
+          <button class="btn btn-default col-xs-6 col-xs-offset-3 registrate" type="submit" id="signup">Regístrate</button>
         </div>
       </div>
     </div>
