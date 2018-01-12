@@ -20,6 +20,17 @@ img{
 
 /*estilos a menu*/
 
+/* los menús que no se visaulizarán se opacan por el momento */
+.dont-show + h2, .dont-show i, .dont-show {
+  color: #b0b0b0;
+  border-color: #b0b0b0;
+}
+
+.show {
+  cursor: hand;
+  cursor: pointer;
+}
+
 .home{
   background-image: url(../assets/images/PF-03.png);
   height: 100vh;
