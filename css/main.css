@@ -122,3 +122,6 @@ h5{
 
 
 /*estilos a friends*/
+#friends p {
+  margin-bottom: 5em;
+}
