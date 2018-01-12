@@ -16,8 +16,8 @@ $(document).ready(function() {
   // Jalando a todos los usuarios de la BD
   firebase.database().ref('newDB').on('child_added', function(s) {
     var user = s.val();   
-    console.log(user);
-    $friends.append('<img width=\'100px\' src=\'' + user.foto + '\'/>', '<p> ' + user.nombre + '<p/>');  
+    console.log(user.photo);
+    $friends.append('<img width=\'100px\' src=\'' + user.photo + '\'/>', '<p> ' + user.name + '<p/>');  
   });
   // END FIREBASE
   
