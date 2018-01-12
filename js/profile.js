@@ -1,9 +1,15 @@
 $(document).ready(function() {
 
+  console.log(firebase.auth().R);
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+  var uidhere = firebase.auth().R
+  console.log(uidhere['foto']);
+  
 
-  console.log(provider);
+  // var userf = firebase.database().ref('newDB/' + user.uid);
+  // console.log(userf)
+
+  // $('#picture-profile').attr('src','')
   
   $('#share-btn').click(function() {
     event.preventDefault();
