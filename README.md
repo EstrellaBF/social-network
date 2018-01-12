@@ -51,7 +51,3 @@ Esta red social debería de tener además de lo solicitado (perfil, amigos, secc
 ### Prototipado:
 ![proceso UX](assets/images/prototipo1.jpg)
 ![proceso UX](assets/images/prototipo2.jpg)
-
-### Testeo con usuarios:
-
-

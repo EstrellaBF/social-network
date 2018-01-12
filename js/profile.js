@@ -10,6 +10,7 @@ $(document).ready(function() {
   // console.log(userf)
 
   // $('#picture-profile').attr('src','')
+
   
   $('#share-btn').click(function() {
     event.preventDefault();
