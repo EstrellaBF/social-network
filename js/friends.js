@@ -16,8 +16,8 @@ $(document).ready(function() {
   // Jalando a todos los usuarios de la BD
   firebase.database().ref('newDB').on('child_added', function(s) {
     var user = s.val();   
-    console.log(user);
-    $friends.append('<img width=\'100px\' src=\'' + user.foto + '\'/>', '<p> ' + user.nombre + '<p/>');  
+    console.log(user.photo);
+    $friends.append('<img width=\'100px\' src=\'' + user.photo + '\'/>', '<p> ' + user.name + '<p/>');  
   });
   // END FIREBASE
   
@@ -26,20 +26,6 @@ $(document).ready(function() {
     $searchFriends.hide();
     $invitationForm.show();
   });
-  
-  // Evento para guardar el email y verificar que sea email
-  // $mailCoder.on('input', isAnEmail);
-
-  // // función para el evento de verificar mail
-  // function isAnEmail() {
-  //   var patternEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-  //   // console.log(patternEmail.test($(this).val()));
-  //   if (patternEmail.test($(this).val())) {
-  //     // $sendInvitation.prop('disabled', false);
-  //   } else {
-  //     // $sendInvitation.prop('disabled', true);
-  //   }
-  // };
 
   // Si se escribe el correo y si este se verifica que es correo y si sse llegó a escribir en el mensaje, el boton para enviar se activa.
   $mailCoder.on('input', function() {
