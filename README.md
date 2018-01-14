@@ -49,5 +49,16 @@ En base a las respuestas de egresadas y ex alumnas hemos podido concluir que en 
 Esta red social debería de tener además de lo solicitado (perfil, amigos, sección de post etc) una sección de eventos pues una gran mayoría de chicas puso que le interesaría ese tema.
 
 ### Prototipado:
-![proceso UX](assets/images/prototipo1.jpg)
-![proceso UX](assets/images/prototipo2.jpg)
+![proceso UX](assets/images/prototipo1.jpeg)
+![proceso UX](assets/images/prototipo2.jpeg)
+
+### Testeo:
+![Mejora gracias al testeo](assets/images/app-07.png)
+![Mejora gracias al testeo](assets/images/app-08.png)
+![Mejora gracias al testeo](assets/images/app-09.png)
+![Mejora gracias al testeo](assets/images/app-10.png)
+![Mejora gracias al testeo](assets/images/app-11.png)
+![Mejora gracias al testeo](assets/images/app-12.png)
+![Mejora gracias al testeo](assets/images/app-13.png)
+![Mejora gracias al testeo](assets/images/app-14.png)
+![Mejora gracias al testeo](assets/images/app-15.png)

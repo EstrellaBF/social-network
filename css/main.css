@@ -125,6 +125,11 @@ img{
 
 /*estilos a profile*/
 
+.div-post{
+  border: 2px solid #ff7b2a;
+  margin-top: 10px;
+}
+
 .navbar-brand img{
   width: 7em;
 }
@@ -200,5 +205,8 @@ h5{
     font-size: 1.3em;
     padding: 10px 0;
     margin: 0;
+  }
+  .home .menu-01{
+    padding-top: 1em;
   }
 }
