@@ -162,6 +162,10 @@ img{
   margin-top: 10px;
 }
 
+.div-post p{
+  padding: 1em 0 0 0;
+}
+
 .navbar-brand img{
   width: 7em;
 }
@@ -203,6 +207,10 @@ h5{
   display: none;
 }
 
+.form-inline .input-group .input-group-addon{
+  width: 15%;
+}
+
 /*estilos a news*/
 
 
@@ -230,7 +238,6 @@ h5{
 @media(min-width: 768px){
 .home{
   display: flex;
-  
   flex-direction: column;
 }
 
@@ -271,5 +278,10 @@ h5{
   .news-profile{
     margin-top: 20px;
     margin-bottom: 
+  }
+
+  #exampleInputName2{
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
