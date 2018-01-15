@@ -46,11 +46,25 @@ img{
 
 .reg-google{
   text-align: center;
-  padding: 0 1em;
+  padding: 2em;
+  font-weight: 600;
 }
 
 .reg-google p{
-  font-size: 1.5em;
+  font-size: 1.8em;
+}
+
+.quienes-somos{
+  background-image: url(../assets/images/PF-03.png);
+  background-size: 100%;
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+  line-height: 1.2em;
+}
+
+.quienes-somos P{
+  margin: 1.2em;
 }
 
 #photo-chrome{
@@ -70,13 +84,13 @@ img{
 
 #signup-google{
   position: relative;
-  top: 15vh;
+  top: 2vh;
   padding: 1em 0;
 }
 
 .registrate{
   position: relative;
-  top: 20vh;
+  top: 3vh;
   padding: 0.5em 0;
 }
 
@@ -206,9 +220,15 @@ h5{
 }
 
 @media(min-width: 768px){
+.home{
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
   .register-button{
-    position: static;
-    top: 80vh;
+    position: relative;
+    bottom: -30vh;
     display: inline-block;
   }
 
@@ -217,6 +237,11 @@ h5{
     padding: 10px 0;
     margin: 0;
   }
+
+  .logo-register{
+    position: static;
+  }
+  
   .home .menu-01{
     padding-top: 1em;
   }
