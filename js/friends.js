@@ -17,7 +17,7 @@ $(document).ready(function() {
   firebase.database().ref('newDB').on('child_added', function(s) {
     var user = s.val();   
     console.log(user.photo);
-    $friends.append('<img width=\'100px\' src=\'' + user.photo + '\'/>', '<p> ' + user.name + '<p/>');  
+    $friends.append('<div class="col-xs-6 col-sm-3"><img width=\'100px\' src=\'' + user.photo + '\'/>', '<p> ' + user.name + '<p/></div>');  
   });
   // END FIREBASE
   

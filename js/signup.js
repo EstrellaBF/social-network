@@ -25,7 +25,7 @@ $('document').ready(function() {
 
   // Función del modal de google
   function gmailInfo() {
-    $('.quienes-somos').hide();
+    $('#quienes-somos').hide();
     // Pegando la primera línea del punto 5    
     firebase.auth().signInWithPopup(provider).then(function(result) {
       $userDB = result.user;
@@ -33,7 +33,7 @@ $('document').ready(function() {
       saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
-      $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> '+ result.user.displayName + '<p/>');
+      $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-2"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12 col-sm-6 col-sm-offset-1"> ' + result.user.displayName + '<p/>');
       $password.show();
       // añadiendo a localstorage
     });   
