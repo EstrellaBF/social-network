@@ -29,15 +29,24 @@ $('document').ready(function() {
     firebase.auth().signInWithPopup(provider).then(function(result) {
       $userDB = result.user;
       console.log($userDB);
+      localStorage.UID = $userDB.uid;
       saveAccount(result.user);
       $signupGoogle.hide();
       // añadiendo mi imagen de google
       $photoChrome.append('<div class="img-circle col-xs-6 col-xs-offset-3"><img src=" ' + result.user.photoURL + ' " /></div>', '<p class="col-xs-12"> '+ result.user.displayName + '<p/>');
       $password.show();
       // añadiendo a localstorage
+      // Guardo foto en localStorage
+      var routeActualPhoto = $('.img-circle img').prop('src');
+      var actualName = $('#photo-chrome .col-xs-12');
+      localStorage.actualPhotoProfile = routeActualPhoto;
+      localStorage.actualPhotoProfile = actualName;
     });   
   }
-  console.log($userDB);
+
+  var referencia = firebase.database().ref('newDB/' + localStorage.UID).child('name');
+  console.log(referencia);
+
   // objeto de la base de datos
   var userInfo = {};
   // Guardando datos 
