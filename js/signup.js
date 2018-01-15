@@ -25,6 +25,7 @@ $('document').ready(function() {
 
   // Función del modal de google
   function gmailInfo() {
+    $('.quienes-somos').hide();
     // Pegando la primera línea del punto 5    
     firebase.auth().signInWithPopup(provider).then(function(result) {
       $userDB = result.user;
