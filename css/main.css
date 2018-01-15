@@ -149,6 +149,13 @@ img{
 }
 
 /*estilos a profile*/
+#input-post{
+  width: 100%;
+}
+
+.form-group{
+  padding: 0;
+}
 
 .div-post{
   border: 2px solid #ff7b2a;
@@ -160,6 +167,7 @@ img{
 }
 
 h4{
+  font-size: 2em;
   margin: 0;
 }
 
@@ -222,13 +230,13 @@ h5{
 @media(min-width: 768px){
 .home{
   display: flex;
-  align-content: center;
-  align-items: center;
+  
+  flex-direction: column;
 }
 
   .register-button{
     position: relative;
-    bottom: -30vh;
+    bottom: -60vh;
     display: inline-block;
   }
 
@@ -239,10 +247,29 @@ h5{
   }
 
   .logo-register{
-    position: static;
+    position: relative;
+    top: 40vh
   }
   
   .home .menu-01{
     padding-top: 1em;
+  }
+  /*estilos a menu*/
+  .icons-aling{
+    position: relative;
+    top: 30vh;
+  }
+  /**/
+  .input-group{
+    width: 100%;
+    
+  }
+  .form-group{
+    padding: 0 10px 0 0;
+  }
+
+  .news-profile{
+    margin-top: 20px;
+    margin-bottom: 
   }
 }
